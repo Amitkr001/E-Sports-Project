@@ -19,6 +19,7 @@ export default function App() {
         <Route path="/events" element={<Events />} /> 
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/Blogs"  element={<Blogs /> } />
       </Routes> 
     </BrowserRouter>
   );
