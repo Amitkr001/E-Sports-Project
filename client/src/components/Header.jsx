@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Navbar, TextInput } from "flowbite-react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom"; // Import NavLink
 import logoImg from "../assets/logo.png";
 import { RiSearch2Line, RiMenu3Line, RiCloseLine } from "react-icons/ri";
 
@@ -47,18 +47,36 @@ export default function Header() {
       </div>
 
       <div className={`lg:flex ${isOpen ? 'flex flex-col mt-4' : 'hidden'}`}>
-        <Link to={"/events"} className="text-gray-600 hover:text-gray-800 lg:mr-4 block lg:inline">
+        <NavLink
+          to={"/events"}
+          className="text-gray-600 hover:text-gray-800 lg:mr-4 block lg:inline"
+          activeStyle={{
+            color: "purple", // Change text color to purple for active NavLink
+          }}
+        >
           Events
-        </Link>
-        <Link to={"/Blogs"} className="text-gray-600 hover:text-gray-800 lg:mr-4 block lg:inline">
+        </NavLink>
+        <NavLink
+          to={"/blog"}
+          className="text-gray-600 hover:text-gray-800 lg:mr-4 block lg:inline"
+          activeStyle={{
+            color: "purple", // Change text color to purple for active NavLink
+          }}
+        >
           Blogs
-        </Link>
-        <Link to={"/about"} className="text-gray-600 hover:text-gray-800 block lg:inline">
+        </NavLink>
+        <NavLink
+          to={"/about"}
+          className="text-gray-600 hover:text-gray-800 block lg:inline"
+          activeStyle={{
+            color: "purple", // Change text color to purple for active NavLink
+          }}
+        >
           About
-        </Link>
+        </NavLink>
       </div>
 
-      <Link to="/Signin">
+      <Link to="/signin">
         <button
           className={`bg-gradient-to-r from-purple-500 to-blue-500 hover:from-blue-600 hover:to-purple-600 text-white py-2 px-4 rounded-full transition duration-300 ${
             isHovered ? "animate-border" : ""
