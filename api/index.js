@@ -2,6 +2,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRoutes from './routes/user.route.js';
+import authRoutes from './routes/auth.route.js';
+import { signup } from './controllers/auth.controller.js';
 
 dotenv.config();
 
@@ -20,3 +22,5 @@ app.listen(3001, () => {
 
 // Use userRoutes for handling requests starting with /api/users
 app.use('/api/users', userRoutes);
+app.use('/api/auth' , signup);
+
