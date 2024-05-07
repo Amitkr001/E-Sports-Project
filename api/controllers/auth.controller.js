@@ -7,7 +7,6 @@ export const signup = async (req, res) => {
   if (!username || !email || !password || password.length < 6 || password === "" || username === "" || email === "") {
     return res.status(400).json({ message: 'Please enter all the fields' });
   }
-
   try {
     // Check if the user already exists
     const existingUser = await User.findOne({ email });
