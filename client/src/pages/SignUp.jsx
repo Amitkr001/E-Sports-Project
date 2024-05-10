@@ -5,7 +5,7 @@ export default function SignIn() {
       //neede to devide page in two section right and left .left side for form and right side for image
     <div className='min-h-screen mt-20'>
       //signup page done on repl it 
-      
+      //strike 
     </div>
   )
 }
