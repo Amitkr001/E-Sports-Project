@@ -50,7 +50,7 @@ export default function Header() {
         <NavLink
           to={"/events"}
           className="text-gray-600 hover:text-gray-800 lg:mr-4 block lg:inline"
-          activeStyle={{
+          activestyle={{ // Change activeStyle to activestyle
             color: "purple", // Change text color to purple for active NavLink
           }}
         >
@@ -59,7 +59,7 @@ export default function Header() {
         <NavLink
           to={"/blog"}
           className="text-gray-600 hover:text-gray-800 lg:mr-4 block lg:inline"
-          activeStyle={{
+          activestyle={{ // Change activeStyle to activestyle
             color: "purple", // Change text color to purple for active NavLink
           }}
         >
@@ -68,7 +68,7 @@ export default function Header() {
         <NavLink
           to={"/about"}
           className="text-gray-600 hover:text-gray-800 block lg:inline"
-          activeStyle={{
+          activestyle={{ // Change activeStyle to activestyle
             color: "purple", // Change text color to purple for active NavLink
           }}
         >
