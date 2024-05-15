@@ -30,7 +30,7 @@ export default function SignUp() {
   };
 
   return (
-    <div className="signUp-page flex flex-col md:flex-row justify-center items-center h-screen">
+    <div className="signUp-page flex flex-col md:flex-row justify-center items-center h-screen mt-5">
       <div className="left flex flex-col justify-center items-center md:w-1/2 bg-white px-8 py-12">
         <div className="container">
           <div className="header-text text-center">
