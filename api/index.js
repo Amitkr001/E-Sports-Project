@@ -3,7 +3,6 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRoutes from './routes/user.route.js';
 import authRoutes from './routes/auth.route.js';
-import { signup } from './controllers/auth.controller.js';
 
 dotenv.config();
 
@@ -12,16 +11,18 @@ const app = express();
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO).then(() => {
-  console.log('Connected to MongoDB');
-});
+mongoose.connect(process.env.MONGO, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch((error) => {
+    console.error('Error connecting to MongoDB:', error);
+  });
 
 app.listen(3001, () => {
   console.log('Server is running on port 3001');
 });
 
-// Use userRoutes for handling requests starting with /api/users
+// Use routes for handling requests
 app.use('/api/users', userRoutes);
-app.use('/api/auth' , signup);
-
-
+app.use('/api/auth', authRoutes);
