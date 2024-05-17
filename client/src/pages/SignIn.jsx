@@ -79,7 +79,7 @@ export default function SignIn() {
               >
                 Sign In with Google
               </button>
-              <p>Haven't account create one ? <a href="/signup">signUp</a></p>
+              <p>Haven't account create one ? <a className='link text-red-600' href="/signup">signUp</a></p>
             </form>
           </main>
         </div>
