@@ -1,6 +1,5 @@
 # GamerHaven
 
-## Description
 GamerHaven is a comprehensive platform designed to cater to the diverse needs of esports enthusiasts worldwide. Whether you're a competitive gamer, a casual player, or simply passionate about the gaming community, GamerHaven provides a welcoming space for all. From staying updated with the latest esports news and tournament updates to engaging with fellow gamers through vibrant forums and chats, GamerHaven is your go-to destination for all things gaming.
 
 ## Features
